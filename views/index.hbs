@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="/stylesheets/default.css"/>
+    <script src="/javascripts/calculation.js"> </script>
+  </head>
+  <body>
+        <form onsubmit="return checkValid();" method ="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="top-title"> <b> Bé tập tính </b></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p> Số thứ nhất </p>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="first" id="1" onblur="checkIsN()" value="{{firstValue}}"/>
+                    </div>
+                    <div class="col-1">
+                        <input type="radio" name="MS" id="Cộng" value ='1'/>
+                        <label for="Cộng">
+                            Cộng
+                        </label>
+                    </div>
+                    <div class="col-1">
+                        <input type="radio" name="MS" id="Trừ" value ='2'/>
+                        <label for="Trừ">
+                            Trừ
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p> Số thứ hai </p>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" name="second" id="2" onblur="checkIsN()" value="{{secondValue}}"/>
+                    </div>
+                    <div class="col-1">
+                        <input type="radio" name="MS" id="Nhân" value ='3'/>
+                        <label for="Nhân">
+                            Nhân
+                        </label>
+                    </div>
+                    <div class="col-1">
+                        <input type="radio" name="MS" id="Chia" value ='4'/>
+                        <label for="Chia">
+                            Chia
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p> Kết quả </p>
+                    </div>
+                    <div class="col-2">
+                        <input id="3" name ="result" disabled value="{{calculateValue}}"/>
+                    </div>
+                    <div class="col-1">
+                        <input type="submit" value="Tính"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p> Thông báo </p>
+                    </div>
+                    <div class="col-4">
+                        <output id="4" name="warning" class="warning">
+                        </output>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
